@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerViewCell" id="gTV-IL-0wX" customClass="BannerViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viM-FG-J5t">
+                        <rect key="frame" x="16" y="16" width="168" height="168"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3SD-1O-NPS">
+                                <rect key="frame" x="0.0" y="0.0" width="168" height="168"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3SD-1O-NPS" firstAttribute="leading" secondItem="viM-FG-J5t" secondAttribute="leading" id="910-IV-kU0"/>
+                            <constraint firstItem="3SD-1O-NPS" firstAttribute="top" secondItem="viM-FG-J5t" secondAttribute="top" id="BjS-tZ-CM9"/>
+                            <constraint firstAttribute="bottom" secondItem="3SD-1O-NPS" secondAttribute="bottom" id="QcX-f0-iRb"/>
+                            <constraint firstAttribute="trailing" secondItem="3SD-1O-NPS" secondAttribute="trailing" id="l3u-UC-Fni"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="viM-FG-J5t" secondAttribute="trailing" constant="16" id="6hv-nX-XoW"/>
+                <constraint firstAttribute="bottom" secondItem="viM-FG-J5t" secondAttribute="bottom" constant="16" id="CZH-VH-AHr"/>
+                <constraint firstItem="viM-FG-J5t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="mIi-My-oOS"/>
+                <constraint firstItem="viM-FG-J5t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="w9Z-kJ-o2W"/>
+            </constraints>
+            <connections>
+                <outlet property="bannerImage" destination="3SD-1O-NPS" id="piA-eh-9z6"/>
+                <outlet property="parentView" destination="viM-FG-J5t" id="hLz-Mb-QlO"/>
+            </connections>
+            <point key="canvasLocation" x="-38" y="21"/>
+        </collectionViewCell>
+    </objects>
+</document>
