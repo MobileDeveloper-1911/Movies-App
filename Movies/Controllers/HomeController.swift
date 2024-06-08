@@ -33,6 +33,8 @@ class HomeController: UIViewController {
         
         upcomingCollectionView.register(MoviesCollectionCell.nib(), forCellWithReuseIdentifier: MoviesCollectionCell.reusableIdentifier)
         
+        
+
         nowPlayingCollectionView.delegate = self
         nowPlayingCollectionView.dataSource = self
         bannerCollectionView.delegate = self

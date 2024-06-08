@@ -16,6 +16,7 @@ class MovieDetailController: UIViewController {
     @IBOutlet weak var languageLabel : UILabel!
     @IBOutlet weak var releaseDateLabel : UILabel!
     @IBOutlet weak var overviewLabel : UILabel!
+    @IBOutlet weak var allVideosLabel : UILabel!
     @IBOutlet weak var similarMoviesCollectionView : UICollectionView!
     
     var similarMoviesVM = SimilarMovies()
@@ -41,6 +42,11 @@ class MovieDetailController: UIViewController {
         movieImage.setImage(with: movieImageURL ?? "")
         titleLabel.text = titleText
         
+        allVideosLabel.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTap(sender: )))
+        allVideosLabel.addGestureRecognizer(tapGesture)
+        
         if let language = languageText {
             languageLabel.text = "Language: \(language)"
         }
@@ -56,6 +62,17 @@ class MovieDetailController: UIViewController {
         
         
 
+    }
+    
+    @objc
+    func onTap(sender: UIGestureRecognizer){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "ViewAll") as! ViewAllViewController
+        
+        newVC.moviesResponse = similarMovieResponse
+       
+        self.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(newVC, animated: true)
     }
     
     func observeEvents(movieIDValue: Int) {

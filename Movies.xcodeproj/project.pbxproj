@@ -40,6 +40,8 @@
 		7CBF8BE22BF52139006A4710 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF8BE12BF52139006A4710 /* APIManager.swift */; };
 		7CBF8BE52BF5249A006A4710 /* NewResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF8BE42BF5249A006A4710 /* NewResponseModel.swift */; };
 		7CBF8BE82BF52653006A4710 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF8BE72BF52653006A4710 /* NewsViewModel.swift */; };
+		7CC668B32C140E6700B659D6 /* ViewAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC668B22C140E6700B659D6 /* ViewAllViewController.swift */; };
+		7CC668B62C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CC668B42C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		7CBF8BE12BF52139006A4710 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7CBF8BE42BF5249A006A4710 /* NewResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResponseModel.swift; sourceTree = "<group>"; };
 		7CBF8BE72BF52653006A4710 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		7CC668B22C140E6700B659D6 /* ViewAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllViewController.swift; sourceTree = "<group>"; };
+		7CC668B52C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLocalStorage.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 				7C74555C2B73F11500C8EA11 /* Assets.xcassets */,
 				7C74555E2B73F11500C8EA11 /* LaunchScreen.storyboard */,
 				7C7455612B73F11500C8EA11 /* Info.plist */,
+				7CC668B42C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodeld */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				7C750F2A2BFE63520025F856 /* HomeController.swift */,
 				7CA7EC4C2C022795004E3721 /* TvseriessController.swift */,
 				7C7E59552C0E391D00A9B27F /* MovieDetailController.swift */,
+				7CC668B22C140E6700B659D6 /* ViewAllViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				7C7455582B73F11100C8EA11 /* ViewController.swift in Sources */,
 				7C33C7142C04AEB6006A3C91 /* SeriesTypeCell.swift in Sources */,
 				7C7455542B73F11100C8EA11 /* AppDelegate.swift in Sources */,
+				7CC668B32C140E6700B659D6 /* ViewAllViewController.swift in Sources */,
 				7CA7EC532C02288B004E3721 /* ProfileTableViewCell.swift in Sources */,
 				7C3C0AA12C01F4F4008DFB1E /* ImageView.swift in Sources */,
 				7CBF8BE22BF52139006A4710 /* APIManager.swift in Sources */,
@@ -429,6 +436,7 @@
 				7C7E59562C0E391D00A9B27F /* MovieDetailController.swift in Sources */,
 				7CBF8BE82BF52653006A4710 /* NewsViewModel.swift in Sources */,
 				7C4C508A2C10E08100A199C5 /* SimilarMoviesViewModel.swift in Sources */,
+				7CC668B62C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodeld in Sources */,
 				7C7455562B73F11100C8EA11 /* SceneDelegate.swift in Sources */,
 				7CA7EC5E2C023CE4004E3721 /* BannerViewModel.swift in Sources */,
 				7CBF8BE52BF5249A006A4710 /* NewResponseModel.swift in Sources */,
@@ -793,6 +801,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7CC668B42C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CC668B52C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodel */,
+			);
+			currentVersion = 7CC668B52C142F2D00B659D6 /* MoviesLocalStorage.xcdatamodel */;
+			path = MoviesLocalStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C7455482B73F11000C8EA11 /* Project object */;
 }
