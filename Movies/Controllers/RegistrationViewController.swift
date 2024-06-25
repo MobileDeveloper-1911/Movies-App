@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegistrationViewController: UIViewController {
 
@@ -34,9 +35,21 @@ class RegistrationViewController: UIViewController {
             print("Enter user password")
             return
         }
-        
-        
+        saveUser(name: username, password: password)
+        self.navigationController?.popViewController(animated: true)
+
     }
+    
+    func saveUser(name: String, password: String){
+        let user = Registration(context: PersistentStorage.Shared.context)
+        user.name = name
+        user.password = password
+        PersistentStorage.Shared.saveContext()
+    }
+    
+    
+    
+
     
 
 }

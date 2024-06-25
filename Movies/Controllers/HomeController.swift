@@ -33,7 +33,6 @@ class HomeController: UIViewController {
         
         upcomingCollectionView.register(MoviesCollectionCell.nib(), forCellWithReuseIdentifier: MoviesCollectionCell.reusableIdentifier)
         
-        
 
         nowPlayingCollectionView.delegate = self
         nowPlayingCollectionView.dataSource = self
@@ -211,7 +210,7 @@ extension HomeController : UICollectionViewDelegate, UICollectionViewDataSource,
         newVC.releaseDateText = responseData.results?[indexPath].release_date
         newVC.overViewText = responseData.results?[indexPath].overview
         newVC.movieID = responseData.results?[indexPath].id
-        self.hidesBottomBarWhenPushed = true
+       // self.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newVC, animated: true)
     }
  

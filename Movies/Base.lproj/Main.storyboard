@@ -393,7 +393,7 @@
         <!--Home Controller-->
         <scene sceneID="D2F-fM-OOu">
             <objects>
-                <viewController id="Bik-qM-qpd" customClass="HomeController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" id="Bik-qM-qpd" customClass="HomeController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f2C-YG-ZqQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -598,7 +598,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Mobile Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQA-qS-tJ7">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="56"/>
-                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-2x-OhP">
@@ -609,7 +609,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GaR-5F-Dmu">
                                                 <rect key="frame" x="0.0" y="172" width="361" height="56"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed4-dQ-tyo">
                                                 <rect key="frame" x="0.0" y="258.00000000000006" width="361" height="56"/>
@@ -687,10 +687,10 @@
             </objects>
             <point key="canvasLocation" x="2294" y="-76"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Home View Controller-->
         <scene sceneID="7P2-36-1d4">
             <objects>
-                <tabBarController id="lIG-O7-qHh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabHomeController" id="lIG-O7-qHh" customClass="TabHomeViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cRQ-bc-XDf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -709,7 +709,7 @@
         <!--Login View Controller-->
         <scene sceneID="AhG-iq-ual">
             <objects>
-                <viewController id="ghn-5q-orT" customClass="LoginViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="ghn-5q-orT" customClass="LoginViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUW-8M-Xlv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,7 +736,7 @@
                                             <constraint firstAttribute="height" constant="50" id="eSz-qt-SYu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dO9-XS-wn7">
                                         <rect key="frame" x="16" y="98" width="329" height="50"/>
@@ -744,11 +744,19 @@
                                             <constraint firstAttribute="height" constant="50" id="PAe-B6-TOw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV9-or-g3i">
                                         <rect key="frame" x="16" y="180" width="329" height="50"/>
                                         <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-EK-ueg">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="ghn-5q-orT" eventType="touchUpInside" id="uFf-Br-1bk"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdo-nT-sLb">
                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
@@ -760,14 +768,26 @@
                                         <constraints>
                                             <constraint firstItem="Sdo-nT-sLb" firstAttribute="top" secondItem="EV9-or-g3i" secondAttribute="top" id="69p-Uc-c2j"/>
                                             <constraint firstAttribute="height" constant="50" id="EAg-Ud-cAV"/>
+                                            <constraint firstItem="7Mb-EK-ueg" firstAttribute="leading" secondItem="EV9-or-g3i" secondAttribute="leading" id="Tlf-49-T5G"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Mb-EK-ueg" secondAttribute="trailing" id="VHE-vv-Zcq"/>
                                             <constraint firstItem="Sdo-nT-sLb" firstAttribute="leading" secondItem="EV9-or-g3i" secondAttribute="leading" id="WCZ-nl-tqw"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Mb-EK-ueg" secondAttribute="bottom" id="WJT-mB-h1A"/>
                                             <constraint firstAttribute="trailing" secondItem="Sdo-nT-sLb" secondAttribute="trailing" id="w7T-TH-qmN"/>
                                             <constraint firstAttribute="bottom" secondItem="Sdo-nT-sLb" secondAttribute="bottom" id="xCT-fr-xxv"/>
+                                            <constraint firstItem="7Mb-EK-ueg" firstAttribute="top" secondItem="EV9-or-g3i" secondAttribute="top" id="xhE-hd-XOY"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnw-Lm-loj">
                                         <rect key="frame" x="16" y="246.00000000000006" width="329" height="50"/>
                                         <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9Y-5p-OYT">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="ghn-5q-orT" eventType="touchUpInside" id="5F3-U0-E5Z"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA5-lL-wqY">
                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
@@ -779,9 +799,13 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="tA5-lL-wqY" secondAttribute="bottom" id="HFj-xW-PgE"/>
                                             <constraint firstItem="tA5-lL-wqY" firstAttribute="top" secondItem="Mnw-Lm-loj" secondAttribute="top" id="NRL-5C-X8p"/>
+                                            <constraint firstItem="U9Y-5p-OYT" firstAttribute="top" secondItem="Mnw-Lm-loj" secondAttribute="top" id="RU6-I6-Ql2"/>
                                             <constraint firstAttribute="height" constant="50" id="VPU-ZM-nhr"/>
                                             <constraint firstAttribute="trailing" secondItem="tA5-lL-wqY" secondAttribute="trailing" id="Zr3-QY-fzR"/>
+                                            <constraint firstItem="U9Y-5p-OYT" firstAttribute="leading" secondItem="Mnw-Lm-loj" secondAttribute="leading" id="ruY-C7-atI"/>
+                                            <constraint firstAttribute="bottom" secondItem="U9Y-5p-OYT" secondAttribute="bottom" id="swn-1K-zl1"/>
                                             <constraint firstItem="tA5-lL-wqY" firstAttribute="leading" secondItem="Mnw-Lm-loj" secondAttribute="leading" id="wjz-XM-cnJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="U9Y-5p-OYT" secondAttribute="trailing" id="wv9-Lb-fdz"/>
                                         </constraints>
                                     </view>
                                 </subviews>

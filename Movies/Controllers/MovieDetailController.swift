@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class MovieDetailController: UIViewController {
     
     @IBOutlet weak var posterImage : UIImageView!
